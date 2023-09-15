@@ -1,0 +1,22 @@
+1.- Verifica la cantidad de datos que tienen, las variables que contiene cada vector de datos e identifica el tipo de variables.
+Hay 131 datos para las emisiones per cápita en México.
+Las variables que contienen los vectores de datos, de acuerdo al data frame creado, son: "Entity", "Code", "Year" y "Anual CO2 emissions (per capita). Entity" contiene strings, "Code" contiene strings, "Year" contiene ints y "Annual CO₂ emissions (per capita)" contiene floats.
+2.- Analiza las variables para saber qué representa cada una y en qué rangos se encuentran. Si la descripción del problema no te lo indica, utiliza el máximo y el mínimo para encontrarlo. 
+Estas variables:"Entity", "Code", "Year" y "Anual CO2 emissions (per capita)" son objetos de la clase pandas.
+Rangos de los datos (utilizando máximo y mínimo)
+Desde el año: 1891, hasta: 2021 
+Emisión mínima: 0.03995755, emisión máxima: 6.141397
+3.- Basándose en la media, mediana y desviación estándar de cada variable, qué conclusiones puedes entregar de los datos.
+Year 
+Media: 1956.0 
+Mediana: 1956.0 
+Desviación estándar: 37.960505792204614 
+Annual CO₂ emissions (per capita):
+Media: 2.3007477316946563 
+Mediana: 1.8298723 
+Desviación estándar: 1.5991611712518976
+Year: 
+Realmente no podemos sacar muchas conclusiones de los resultados de la media, mediana y desviación estándar, ya que los años son todos diferentes. En otras palabras, la naturaleza de la variable como tal, no se presta para sacar mucha información, es por eso que su desviación estándar es tan grande (cada año se va alejando más y más de la media, y en general son datos que no se repiten). 
+Annual CO₂ emissions (per cápita):
+La media nos dice que en promedio, desde 1891, cada persona emite aproximadamente 2.3 toneladas de CO2 al año. La mediana simplemente nos indica la emisión del año 1956, el cual es también la mediana de los años. La desviación estándar es grande, lo cual nos dice que los datos han ido cambiando mucho, o que son muy dispersos; por el contexto climático actual, probablemente estas emisiones per cápita han estado aumentando conforme los años van transcurriendo.
+
