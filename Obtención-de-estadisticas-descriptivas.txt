@@ -1,0 +1,42 @@
+import pandas as pd
+import seaborn as sns
+import matplotlib as plt
+import numpy as np
+
+
+df_mex = df[df['Code']=='MEX']
+print(df_mex.describe())
+# Hay 131 datos para las emisiones per capita en México
+print(df_mex)
+# Las variables que contienen los vectores de datos, de acuerdo a al data frame creado, son: "Entity", "Code", "Year" y "Anual CO2 emissions (per capita)"
+# "Entity" contiene strings, "Code" contiene strings, "Year" contiene ints y "Annual CO₂ emissions (per capita)" contiene floats. 
+
+
+print(df_mex['Entity'].info)
+print(df_mex['Code'].info)
+print(df_mex['Year'].info)
+print(df_mex['Annual CO₂ emissions (per capita)'].info)
+# Estas variables:"Entity", "Code", "Year" y "Anual CO2 emissions (per capita)" son objetos de la clase pandas. 
+
+
+# Para saber lo que representa cada vector de variables o columna, realmente solo se necesita leer los titulos de cada una. Entity se refiere al país, Code es una abreviación del país, Year claramente es el año en el que se tomaron los datos y Annual CO₂ emissions (per capita) es la cantidad de CO2 emitida por persona.
+
+# Máximo y mínimo de Year y Annual CO₂ emissions (per capita), esto para saber en que rango se encuentran. 
+print(f"Desde el año: {df_mex['Year'].min()}, hasta: {df_mex['Year'].max()}")
+print(f"Emision mínima: {df_mex['Annual CO₂ emissions (per capita)'].min()}, emision máxima: {df_mex['Annual CO₂ emissions (per capita)'].max()}")
+
+
+#Basándose en la media, mediana y desviación estándar de cada variable, que conclusiones puedes entregar de los datos.
+print(f"Year\nMedia: {df_mex['Year'].mean()}\nMediana: {df_mex['Year'].median()}\nDesviación estandar: {df_mex['Year'].std()}\n")
+print(f"Annual CO₂ emissions (per capita)\nMedia: {df_mex['Annual CO₂ emissions (per capita)'].mean()}\nMediana: {df_mex['Annual CO₂ emissions (per capita)'].median()}\nDesviación estandar: {df_mex['Annual CO₂ emissions (per capita)'].std()}")
+
+# Year:
+# Realmente no podemos sacar muchas conclusiónes de los resultados de la media, mediana y desvición estandar, ya que los años son todos diferentes. En otras palabras
+# la naturaleza de la variable como tal, no se presta para sacar mucha información, es por eso que su desviación estandar es tan grande (cada año se va alejando más y más de la media, y en general son datos que no se repiten).  
+
+# Annual CO₂ emissions (per capita)
+# La media nos dice que en promedio, desde 1891, cada persona emite aproximadamente 2.3 toneladas de CO2 al año. 
+# La mediana simplemente nos indica la emision del año 1956, el cual es también la mediana de los años. 
+# La desviación estandar es grande, lo cual nos dice que los datos han ido cambiando mucho, por el contexto climatico actual, probablemente estas emisiones per capita a estado aumentando. 
+
+
