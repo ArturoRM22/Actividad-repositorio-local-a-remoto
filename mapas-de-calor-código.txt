@@ -1,0 +1,28 @@
+import pandas as pd
+import seaborn as sns
+import matplotlib.pyplot as plt
+import numpy as np
+
+df = pd.read_csv('database_evidencia.csv')
+
+sns.boxplot(data = df, y = 'GDP per capita (output, multiple price benchmarks)', x ='Entity')
+
+
+corr = df.corr()
+sns.heatmap(data = corr, cmap = 'Blues', annot=True)
+
+fig = plt.figure(figsize=(8, 6))
+plt.hist(df['Annual working hours per worker'], bins=10, color='blue', edgecolor='black')
+plt.title('Histograma: Annual working hours per worker')
+fig = plt.figure(figsize=(8, 6))
+plt.hist(df['GDP per capita (output, multiple price benchmarks)'], bins=10, color='red', edgecolor='black')
+plt.title('Histograma: GDP per capita (output, multiple price benchmarks)')
+
+result = df.groupby('Entity')['Annual working hours per worker'].agg(['max', 'min'])
+print(result)
+result_2 = df.groupby('Entity')['GDP per capita (output, multiple price benchmarks)'].agg(['max', 'min'])
+print(result_2)
+result_3 = df.groupby('Entity')['Population (historical estimates)'].agg(['max', 'min'])
+print(result_3)
+
+sns.pairplot(data = df, hue = 'Entity')

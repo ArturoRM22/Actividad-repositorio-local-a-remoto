@@ -1,0 +1,14 @@
+¿Hay alguna variable que no aporta información? 
+No, realmente todas aportan información, sin embargo algunas representan información más relevante. 
+Si tuvieras que eliminar variables, ¿cuáles quitarías y por qué?
+Si el objetivo fuera solo hacer análisis básicos, no quitaría ninguna; pero si se quisiera realizar una regresión lineal múltiple para crear un modelo para predecir el PIB, quitaría la Población y las horas de trabajo por trabajador, ya que de acuerdo al mapa de calor, estas no se correlacionan tanto como deberían (correlaciones de -0.26 y -0,37 ).  Una correlación ideal sería por lo menos 9. Entonces, estas correlaciones tan bajas, nos dejan ver que estas variables no son tan representativas para el objetivo del modelo de regresión. 
+ ¿Existen variables que tengan datos extraños? 
+No considero que alguna variable cuente con datos extraños, simplemente son algo dispersos, pero tiene sentido que así sea, porque la situación económica de los países ha sido bastante distinta en el rango de años que ha sido analizada.  
+Si comparas las variables, ¿todas están en rangos similares? 
+Los años y la cantidad de horas trabajadas por trabajador, tienen rangos muy similares en los 4 países; pero si hablamos de la Población y del PIB per cápita, si se observa un notable cambio en los rangos de cada país. 
+¿Crees que esto afecte?
+Depende un poco de cómo vayas a analizar los datos, pero por lo que sé, lo mejor muchas veces es que los datos tengan una desviación estándar mínima. Esto para sacar conclusiones más precisas. 
+¿Puedes encontrar grupos qué se parezcan? 
+De acuerdo con la gráfica que nos despliega la función .pairplot, realmente no se ve muy claro la posible formación de grupos. Supongo que esto es solo por la naturaleza de los datos. 
+¿Qué grupos son estos?
+
